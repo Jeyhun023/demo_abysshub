@@ -7,7 +7,7 @@ use App\Notifications\Auth\WelcomeMail;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendWelcomeMailListener implements ShouldQueue
+class SendWelcomeMailListener 
 {
     use InteractsWithQueue;
 
