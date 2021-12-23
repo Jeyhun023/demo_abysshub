@@ -9,7 +9,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SendWelcomeMailListener 
 {
-    use InteractsWithQueue;
 
     /**
      * Handle the event.
