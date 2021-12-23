@@ -17,7 +17,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         NewUserRegisteredEvent::class => [
             SendWelcomeMailListener::class
-        ]
+        ],
     ];
 
     /**
