@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Events\NewUserRegisteredEvent;
 use App\Models\User;
 use App\Http\Resources\Auth\UserResource;
 use App\Traits\ApiResponser;
@@ -24,6 +25,8 @@ class AuthController extends Controller
             ]);
             $user->save();
             
+            event(new NewUserRegisteredEvent($user));
+
             return $this->successResponse(new UserResource($user), trans('messages.register_success'));
         } catch (Exception $e) {
             return $this->errorResponse(["failed" => [trans('messages.failed')] ]);
