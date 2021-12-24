@@ -16,6 +16,6 @@ use App\Http\Controllers\Api\Other\SubscribeController;
 |
 */
 
-Route::post('/register', [AuthController::class, 'register']); 
-Route::post('/subscribe', [SubscribeController::class, 'subscribe']); 
+Route::post('/register', [AuthController::class, 'register'])->middleware('throttle:15,1');
+Route::post('/subscribe', [SubscribeController::class, 'subscribe'])->middleware('throttle:15,1');
 

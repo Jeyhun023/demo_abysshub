@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api\Other;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubscribeRequest;
-use App\Http\Resources\Auth\SubscribeResource;
+use App\Http\Resources\Other\SubscribeResource;
 use App\Models\Subscribe;
 use App\Traits\ApiResponser;
 use Illuminate\Http\JsonResponse;

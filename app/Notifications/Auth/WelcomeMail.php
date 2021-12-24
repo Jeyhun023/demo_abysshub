@@ -8,10 +8,8 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class WelcomeMail extends Notification implements ShouldQueue
+class WelcomeMail extends Notification 
 {
-    use Queueable;
-
     /**
      * Create a new notification instance.
      *
