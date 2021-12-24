@@ -22,7 +22,7 @@ class SubscribeController extends Controller
             ]);
             $subscribe->save();
             
-            return $this->successResponse(new SubscribeResource($user), trans('messages.subscribe_success'));
+            return $this->successResponse(new SubscribeResource($subscribe), trans('messages.subscribe_success'));
         } catch (Exception $e) {
             return $this->errorResponse(["failed" => [trans('messages.failed')] ]);
         }
